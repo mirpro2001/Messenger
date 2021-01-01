@@ -22,17 +22,17 @@ namespace CLient_CS_UWP
     public sealed partial class ChatPage : Page
     {
         /// <summary>
-        ///     Предыдущая строчка которую вернул сервер на запрос GET api/Chat
+        ///     Предыдущая строчка, которую вернул сервер на запрос GET api/Chat.
         /// </summary>
         private static string _prevMessagesString = "";
 
         /// <summary>
-        ///     Массив пользователей которые онлайн
+        ///     Массив пользователей, которые онлайн.
         /// </summary>
         private List<string> _onlineUsers = new List<string>();
 
         /// <summary>
-        ///     Инициализация страницы чата
+        ///     Инициализация страницы чата.
         /// </summary>
         public ChatPage()
         {
@@ -58,8 +58,8 @@ namespace CLient_CS_UWP
         }
 
         /// <summary>
-        ///     Вызов диалогового окна и обработка нажатий
-        ///     <br>Вызывается если нету токена в настройках</br>
+        ///     Вызов диалогового окна и обработка нажатий.
+        ///     <br>Вызывается, если нет токена в настройках</br>
         /// </summary>
         private async void AskLogin()
         {
@@ -76,7 +76,7 @@ namespace CLient_CS_UWP
             var nvMain = (NavigationView) Frame.FindName("nvMain");
             switch (result)
             {
-                //Если нажата Login
+                //Если нажата Login.
                 case ContentDialogResult.Primary:
                 {
                     if (nvMain != null) nvMain.SelectedItem = nvMain.MenuItems.OfType<NavigationViewItem>().First();
@@ -96,7 +96,7 @@ namespace CLient_CS_UWP
         }
 
         /// <summary>
-        ///     GET запрос на сервер
+        ///     GET запрос на сервер.
         /// </summary>
         /// <param name="uri">http ссылка на api</param>
         /// <returns>Строка которую вернул сервер</returns>
@@ -114,7 +114,7 @@ namespace CLient_CS_UWP
         }
 
         /// <summary>
-        ///     Обновление истории сообщений и онлайна с сервера
+        ///     Обновление истории сообщений и онлайна с сервера.
         /// </summary>
         public async void UpdateHistory()
         {

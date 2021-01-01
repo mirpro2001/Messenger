@@ -91,7 +91,7 @@ namespace CLient_CS_UWP
             set
             {
                 _ts = value;
-                _dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(Ts);
+                _dateTime = new DateTime(1970, 1, 1, 3, 0, 0, 0).AddSeconds(Ts);
             }
         }
 

@@ -51,7 +51,7 @@ namespace Server_CS
                         {
                             Name = "",
                             Text = $"{user.Key} left",
-                            Ts = (int) (DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds
+                            Ts = (int) (DateTime.Now - new DateTime(1970, 1, 1, 3, 0, 0, 0)).TotalSeconds
                         });
                         Program.OnlineUsersTimeout.Remove(user.Key);
                     }
