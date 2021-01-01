@@ -33,7 +33,8 @@
             UseSystemFocusVisuals="False"
             VerticalScrollBarVisibility="Auto"
             VerticalScrollMode="Auto">
-            <StackPanel HorizontalAlignment="Left">
+            <StackPanel HorizontalAlignment="Center"
+                         VerticalAlignment="Center">
                 <TextBlock
                     Style="{StaticResource TitleTextBlockStyle}"
                     Margin="0,4,0,0"

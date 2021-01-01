@@ -57,20 +57,20 @@ namespace CLient_CS_UWP
         public Message(HorizontalAlignment align, bool online)
         {
             MsgAlignment = align;
-            OnlineBrush = online ? new SolidColorBrush(Colors.DarkGreen) : new SolidColorBrush(Colors.Black);
+            OnlineBrush = online ? new SolidColorBrush(Colors.Lime) : new SolidColorBrush(Colors.DarkGray);
 
             switch (MsgAlignment)
             {
                 // If received message, use accent background
                 // If sent message, use light gray
                 case HorizontalAlignment.Left:
-                    BgColor = new SolidColorBrush(Colors.DarkGray);
+                    BgColor = new SolidColorBrush(Colors.Gray);
                     PersonPictureVisibility = Visibility.Visible;
                     TopHeight = "*";
                     break;
                 // If sent message, use light gray
                 case HorizontalAlignment.Right:
-                    BgColor = new SolidColorBrush(Colors.DeepSkyBlue);
+                    BgColor = new SolidColorBrush(Colors.Gray);
                     PersonPictureVisibility = Visibility.Collapsed;
                     TopHeight = "0";
                     break;

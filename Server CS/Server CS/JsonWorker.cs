@@ -25,7 +25,7 @@ namespace Server_CS
             for (var i = 1; i <= NumberOfRetries; ++i)
                 try
                 {
-                    ///await запускает асинхронную задачу инициализации новый экземпляр класса StreamWriter для указанного файла 
+                    ///await запускает асинхронную задачу инициализации нового экземпляра класса StreamWriter для указанного файла. 
                     ///с помощью кодировки по умолчанию и размера буфера.
                     await using var streamWriter = new StreamWriter(MessagesPath);
                     ///await запускает асинхронную задачу WriteAsync.

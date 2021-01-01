@@ -69,7 +69,7 @@
                     MinWidth="70" MinHeight="6" Click="SendButton_Click" />
         </StackPanel>
 
-        <ListView Name="MessagesListView" Grid.Row="0" Grid.ColumnSpan="2" ItemTemplate="{StaticResource MessageView}">
+        <ListView Name="MessagesListView" Grid.Row="0" Grid.ColumnSpan="2" Background="#000000" ItemTemplate="{StaticResource MessageView}">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <ItemsStackPanel ItemsUpdatingScrollMode="KeepLastItemInView"

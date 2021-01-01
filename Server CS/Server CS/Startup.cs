@@ -23,9 +23,7 @@ namespace Server_CS
             var saverThread = new Thread(SaverCycle) {Name = "SaverThread"};
             saverThread.Start();
         }
-
         public IConfiguration Configuration { get; }
-
         /// <summary>
         ///     Проверка пользователей в сети
         /// </summary>
@@ -35,12 +33,9 @@ namespace Server_CS
             {
                 JsonWorker.Save(Program.Messages);
                 JsonWorker.Save(Program.RegDatas);
-
                 Thread.Sleep(10000);
             }
         }
-
-
         /// <summary>
         ///     Проверка пользователей в сети
         /// </summary>
@@ -58,14 +53,11 @@ namespace Server_CS
                             Text = $"{user.Key} left",
                             Ts = (int) (DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds
                         });
-
                         Program.OnlineUsersTimeout.Remove(user.Key);
                     }
-
                 Thread.Sleep(100);
             }
         }
-
         /// <summary>
         ///     This method gets called by the runtime. Use this method to add services to the container.
         /// </summary>
@@ -88,7 +80,6 @@ namespace Server_CS
                 });
             services.AddControllers();
         }
-
         /// <summary>
         ///     This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         /// </summary>
