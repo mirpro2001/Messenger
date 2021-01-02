@@ -29,7 +29,7 @@ namespace Server_CS
         /// <returns> [Time] Name: Text </returns>
         public override string ToString()
         {
-            return $"[{new DateTime(1970, 1, 1, 3, 0, 0, 0)}] {Name}: {Text}";
+            return $"[{new DateTime(1970, 1, 1, 3, 0, 0, 0).AddSeconds(Ts)}] {Name}: {Text}";
         }
     }
 }
