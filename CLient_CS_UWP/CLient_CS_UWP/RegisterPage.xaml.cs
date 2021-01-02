@@ -33,19 +33,29 @@ namespace CLient_CS_UWP
         {
             if (LoginBox.Text.Length >= 20 || LoginBox.Text == "" || LoginBox.Text.Contains(" "))
             {
-                WarningText.Text = "Invalid nickname format";
+                WarningText.Text = "The nickname format is invalid.";
                 return;
             }
 
             if (CheckNickUnicall())
             {
-                WarningText.Text = "Nickname is busy";
+                WarningText.Text = "Nickname is already in use.";
                 return;
             }
 
             if (PasswordBox1.Password != PasswordBox2.Password)
             {
-                WarningText.Text = "Passwords do not match";
+                WarningText.Text = "Passwords do not match.";
+                return;
+            }
+
+            if (PasswordBox1.Password =="" && PasswordBox2.Password == ""){
+                WarningText.Text = "Password field is empty. Please enter the password to finish the registration.";
+                return;
+            }
+
+            if (PasswordBox1.Password.Length < 6 && PasswordBox2.Password.Length < 6) {
+                WarningText.Text = "The password is too short. It must contain at least 6 characters.";
                 return;
             }
 

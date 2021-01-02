@@ -29,7 +29,6 @@ namespace Server_CS
         /// <returns> [Time] Name: Text </returns>
         public override string ToString()
         {
-            //TODO bad code hour +3, local tim was not realse
             return $"[{new DateTime(1970, 1, 1, 3, 0, 0, 0)}] {Name}: {Text}";
         }
     }
