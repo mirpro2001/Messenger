@@ -26,6 +26,7 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
         <ScrollViewer
+            
             x:Name="contentSV"
             Grid.Row="1"
             Padding="20,0,0,0"
@@ -34,11 +35,11 @@
             VerticalScrollBarVisibility="Auto"
             VerticalScrollMode="Auto">
             <StackPanel HorizontalAlignment="Center"
-                            VerticalAlignment="Center">
+                            VerticalAlignment="Center" >
                 <TextBlock
                     Style="{StaticResource TitleTextBlockStyle}"
                     Margin="0,4,0,0"
-                    Text="Register" MinWidth="200" />
+                    Text="Register" MinWidth="200" RequestedTheme="Default" />
                 <TextBox Name="LoginBox" PlaceholderText="Nickname" KeyDown="Box_OnKeyDown" />
                 <PasswordBox Name="PasswordBox1" PlaceholderText="Password" KeyDown="Box_OnKeyDown" />
                 <PasswordBox Name="PasswordBox2" PlaceholderText="Repeat password" KeyDown="Box_OnKeyDown" />
