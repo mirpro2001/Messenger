@@ -64,27 +64,6 @@ namespace CLient_CS_UWP
         }
 
         /// <summary>
-        ///     Обработчик нажатия кнопки "о разработчиках"
-        /// </summary>
-        private async void ButtonDev_click(object sender, RoutedEventArgs e)
-        {
-            var deleteFileDialog = new ContentDialog
-            {
-                Title = "GROUP HW",
-                Content = "Open the official website?",
-                PrimaryButtonText = "Open",
-                SecondaryButtonText = "Close"
-            };
-
-            var result = await deleteFileDialog.ShowAsync();
-
-            if (result != ContentDialogResult.Primary) return;
-
-            var uri = new Uri("http://group-hw.ru/");
-            await Launcher.LaunchUriAsync(uri);
-        }
-
-        /// <summary>
         ///     Обработчик изменения адреса сервера
         /// </summary>
         private void IPBox_OnTextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
